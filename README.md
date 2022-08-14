@@ -1,4 +1,4 @@
-# coinpro_app
+# coinfo_app
 
 A new Flutter project.
 

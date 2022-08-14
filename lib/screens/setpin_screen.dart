@@ -1,5 +1,5 @@
-import 'package:coinpro_app/constant/theme.dart';
 import 'package:flutter/material.dart';
+import '../constant/theme.dart';
 
 class MyWidget extends StatefulWidget {
   const MyWidget({Key? key}) : super(key: key);
