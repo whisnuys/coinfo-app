@@ -4,6 +4,8 @@ import './screens/splash_screen.dart';
 import './screens/login_screen.dart';
 import './screens/register_screen.dart';
 import './screens/verify_email_screen.dart';
+import './screens/setpin_screen.dart';
+import './screens/congratulation_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +23,8 @@ class MyApp extends StatelessWidget {
         "/register": (context) => const RegisterScreen(),
         "/login": (context) => const LoginScreen(),
         "/verifemail": (context) => const VerifyEmailScreen(),
-        "/setpin": (context) => const VerifyEmailScreen(),
+        "/setpin": (context) => const SetpinScreen(),
+        "/congrats": (context) => const CongratulationScreen(),
       },
     );
   }

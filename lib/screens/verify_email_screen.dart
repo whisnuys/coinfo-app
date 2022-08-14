@@ -10,6 +10,7 @@ class VerifyEmailScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: kWhiteColor,
       appBar: AppBar(
+        centerTitle: true,
         title: Image.asset(
           'assets/image_step1.png',
           width: 200,
