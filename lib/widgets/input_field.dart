@@ -6,6 +6,7 @@ class InputField extends StatelessWidget {
   final bool obscureText;
   final Widget suffixIcon;
   final TextEditingController controller;
+  final TextInputType type;
 
   const InputField({
     Key? key,
@@ -13,6 +14,7 @@ class InputField extends StatelessWidget {
     this.obscureText = false,
     required this.suffixIcon,
     required this.controller,
+    this.type = TextInputType.text,
   }) : super(key: key);
 
   @override
@@ -25,6 +27,7 @@ class InputField extends StatelessWidget {
       child: TextFormField(
         controller: controller,
         obscureText: obscureText,
+        keyboardType: type,
         decoration: InputDecoration(
           hintText: hintText,
           hintStyle: greyTextStyle.copyWith(
