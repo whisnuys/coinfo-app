@@ -13,6 +13,7 @@ Color kWhiteGrey = const Color(0xFFF1F1F5);
 Color kGreenColor = const Color(0xFF24E12F);
 Color kRedColor = const Color(0xFFFF314A);
 Color kBackgroundColor = const Color(0xFFFBFBFB);
+Color kBackgroundColor2 = const Color(0xFFF6F6F6);
 Color kTransparentColor = Colors.transparent;
 
 TextStyle blackTextStyle = GoogleFonts.lato(
