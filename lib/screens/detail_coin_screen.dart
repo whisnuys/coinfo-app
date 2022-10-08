@@ -65,16 +65,21 @@ class DetailCoinScreen extends StatelessWidget {
               width: 78,
               height: 35,
               decoration: BoxDecoration(
-                color: kGreenColor.withOpacity(.10),
+                color: coin.change < 0
+                    ? kRedColor.withOpacity(.10)
+                    : kGreenColor.withOpacity(.10),
                 borderRadius: BorderRadius.circular(40),
               ),
               child: Center(
                 child: Text(
                   '${coin.change}%',
-                  style: greenTextStyle.copyWith(
-                    fontWeight: semiBold,
-                    fontSize: 16,
-                  ),
+                  style: coin.change < 0
+                      ? redTextStyle.copyWith(
+                          fontWeight: semiBold,
+                        )
+                      : greenTextStyle.copyWith(
+                          fontWeight: semiBold,
+                        ),
                 ),
               ),
             ),
@@ -403,7 +408,7 @@ class DetailCoinScreen extends StatelessWidget {
         children: [
           coinTitle(),
           chartCoin(),
-          timePeriod(),
+          // timePeriod(),
           aboutCoin(),
         ],
       ),
