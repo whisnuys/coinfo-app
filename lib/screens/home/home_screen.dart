@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,6 +24,12 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     context.read<GainersCryptoCubit>().fetchGainersCrypto(6);
+
+    // Auto Refresh
+    if (mounted) {
+      Timer.periodic(const Duration(minutes: 10),
+          (timer) => context.read<GainersCryptoCubit>().fetchGainersCrypto(6));
+    }
     super.initState();
   }
 
