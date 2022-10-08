@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io' show Platform;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,15 @@ class _FilterContentState extends State<FilterContent> {
   @override
   void initState() {
     context.read<CryptoCubit>().fetchCrypto();
+
     selectFilter = widget.selectedFilter;
+    // Auto refresh
+    if (mounted) {
+      Timer.periodic(
+          const Duration(minutes: 10),
+          (timer) =>
+              context.read<CryptoCubit>().fetchCrypto(filter: selectFilter));
+    }
     super.initState();
   }
 
