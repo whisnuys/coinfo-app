@@ -1,7 +1,4 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:readmore/readmore.dart';
 import '../constant/theme.dart';
 import '../widgets/blur_appbar.dart';
 import '../widgets/circle_tag_news.dart';
